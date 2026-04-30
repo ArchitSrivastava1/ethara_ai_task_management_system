@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethara Project Tracker</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Ethara Project Tracker</h1>
+
+      <section class="card">
+        <h2>Authentication</h2>
+        <div class="grid">
+          <input id="name" placeholder="Name (for signup)" />
+          <input id="email" placeholder="Email" />
+          <input id="password" placeholder="Password" type="password" />
+          <select id="role">
+            <option value="MEMBER">Member</option>
+            <option value="ADMIN">Admin</option>
+          </select>
+        </div>
+        <div class="actions">
+          <button id="signupBtn">Signup</button>
+          <button id="loginBtn">Login</button>
+          <button id="logoutBtn">Logout</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Dashboard</h2>
+        <button id="refreshDashboardBtn">Refresh Dashboard</button>
+        <pre id="dashboardOutput"></pre>
+      </section>
+
+      <section class="card">
+        <h2>Create Project (Admin)</h2>
+        <div class="grid">
+          <input id="projectName" placeholder="Project name" />
+          <input id="projectDescription" placeholder="Description" />
+        </div>
+        <button id="createProjectBtn">Create Project</button>
+      </section>
+
+      <section class="card">
+        <h2>Create Task (Admin)</h2>
+        <div class="grid">
+          <input id="taskTitle" placeholder="Task title" />
+          <input id="taskProjectId" placeholder="Project ID" />
+          <input id="taskAssigneeId" placeholder="Assignee ID (optional)" />
+          <input id="taskDueDate" type="datetime-local" />
+          <select id="taskStatus">
+            <option value="TODO">TODO</option>
+            <option value="IN_PROGRESS">IN_PROGRESS</option>
+            <option value="DONE">DONE</option>
+          </select>
+        </div>
+        <button id="createTaskBtn">Create Task</button>
+      </section>
+
+      <section class="card">
+        <h2>Data</h2>
+        <div class="actions">
+          <button id="loadProjectsBtn">Load Projects</button>
+          <button id="loadTasksBtn">Load Tasks</button>
+        </div>
+        <h3>Projects</h3>
+        <pre id="projectsOutput"></pre>
+        <h3>Tasks</h3>
+        <pre id="tasksOutput"></pre>
+      </section>
+
+      <section class="card">
+        <h2>Status</h2>
+        <pre id="statusOutput">Ready.</pre>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
