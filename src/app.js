@@ -24,7 +24,7 @@ app.use("/api/projects", projectRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 
-app.get("*", (_req, res) => {
+app.get("/*splat", (_req, res) => {
   res.sendFile(path.join(process.cwd(), "public", "index.html"));
 });
 
