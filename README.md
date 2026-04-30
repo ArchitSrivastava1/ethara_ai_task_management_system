@@ -103,7 +103,7 @@ Open: `http://localhost:4000`
 ## Submission Checklist
 
 - Live URL: `etharaaitaskmanagementsystem-production.up.railway.app`
-- GitHub Repo: `ADD_YOUR_GITHUB_REPO_URL_HERE`
+- GitHub Repo:` https://github.com/ArchitSrivastava1/ethara_ai_task_management_system/tree/main`
 - README: included in this repo
 - 2-5 min Demo Video: `ADD_YOUR_VIDEO_LINK_HERE`
 
