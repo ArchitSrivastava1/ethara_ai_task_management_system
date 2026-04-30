@@ -102,7 +102,7 @@ Open: `http://localhost:4000`
 
 ## Submission Checklist
 
-- Live URL: `ADD_YOUR_RAILWAY_URL_HERE`
+- Live URL: `etharaaitaskmanagementsystem-production.up.railway.app`
 - GitHub Repo: `ADD_YOUR_GITHUB_REPO_URL_HERE`
 - README: included in this repo
 - 2-5 min Demo Video: `ADD_YOUR_VIDEO_LINK_HERE`
