@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  background: #f1f5f9;
+  background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 45%, #f1f5f9 100%);
   color: #0f172a;
 }
 
@@ -15,12 +15,39 @@ body {
   padding: 24px;
 }
 
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  margin: 0;
+}
+
+.hero p {
+  margin: 6px 0 0;
+  color: #334155;
+}
+
+.user-badge {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 10px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
 .card {
-  background: #fff;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 14px;
   padding: 16px;
   margin-bottom: 16px;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.1);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(4px);
 }
 
 .grid {
@@ -39,14 +66,17 @@ button {
 }
 
 button {
-  background: #1d4ed8;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
   color: #fff;
   border: none;
   cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
 button:hover {
   background: #1e40af;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
 }
 
 .actions {
@@ -63,4 +93,43 @@ pre {
   padding: 12px;
   overflow-x: auto;
   min-height: 48px;
+}
+
+.toast-container {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast {
+  min-width: 250px;
+  max-width: 320px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.2);
+  animation: slideIn 180ms ease;
+}
+
+.toast.success {
+  background: #16a34a;
+}
+
+.toast.error {
+  background: #dc2626;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
